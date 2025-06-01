@@ -16,13 +16,13 @@ All components are implemented in a structured and modular format for ease of ex
 ## 📁 Project Structure
 
 ```
-qcav-2023-vision-pipeline/
-├── src/                        # Core algorithms and processing scripts
-│   ├── preprocess.m            # Preprocessing pipeline
-│   ├── feature_extract.m       # Feature detection & extraction
-│   ├── segmentation.m          # Image segmentation logic
-│   └── evaluation.m            # Performance evaluation
-├── data/                       # Sample input images (if provided)
+├── ope/                         # Main processing package
+│   └── __init__.py              # Initialization script
+├── LICENSE                      # License file
+├── README.md                    # Project documentation
+├── outpy.avi                    # Visual output video
+├── tactile.avi                  # Tactile sensor-aligned video
+├── visibility_counts.pickle    # Object visibility tracking data
 ├── results/                    # Output images and logs
 ├── README.md                   # Project documentation
 └── LICENSE                     # Licensing information
