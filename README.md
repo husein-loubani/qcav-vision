@@ -18,8 +18,8 @@ All components are implemented in a structured and modular format for ease of ex
 ```
 ├── ope/                         # Main processing package
 │   └── __init__.py              # Initialization script
-├── LICENSE                      # License file
-├── README.md                    # Project documentation
+│   └── setup.py   
+├── __init__.py                  
 ├── outpy.avi                    # Visual output video
 ├── tactile.avi                  # Tactile sensor-aligned video
 ├── visibility_counts.pickle    # Object visibility tracking data
@@ -30,32 +30,37 @@ All components are implemented in a structured and modular format for ease of ex
 
 ## 🧩 Requirements
 
+- Python 3.x
+- NumPy
+- OpenCV (`cv2`)
+- Pickle (standard)
 - MATLAB R2021b or newer
 - Image Processing Toolbox
 
-No additional packages are required beyond MATLAB standard toolboxes.
+```bash
+pip install numpy opencv-python matplotlib
+```
 
 ## 🚀 Usage
 
-Run the pipeline by executing the main script in MATLAB:
+Run the processing pipeline:
 
-```matlab
-% Navigate to the source directory
-cd src
-
-% Run the complete processing chain
-preprocess;
-feature_extract;
-segmentation;
-evaluation;
+```bash
+python -m ope
 ```
-
 Results will be saved in the `results/` directory.
+
+Make sure the following input files exist in the root directory:
+- `tactile.avi`
+- `outpy.avi`
+- `visibility_counts.pickle`
+
+The script will process these and generate visual overlays or console outputs for inspection.
 
 ## 📜 License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This repository is licensed under the [MIT License](./LICENSE).
 
-## 👨‍💻 Author
+## 👤 Author
 
-Developed by Hussein Loubani as part of the QCaV 2023 research submission.
+Developed by **Hussein Loubani** as part of the QCaV 2023 submission on quality-focused visual inspection pipelines.
